@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24485D181C37AF7D0058C820 /* JQWarterFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24485D171C37AF7D0058C820 /* JQWarterFlowView.m */; };
+		24485D1B1C37B43E0058C820 /* JQWarterFlowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24485D1A1C37B43E0058C820 /* JQWarterFlowCell.m */; };
 		24FC5C871C37AB3200B36D00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FC5C861C37AB3200B36D00 /* main.m */; };
 		24FC5C8A1C37AB3200B36D00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FC5C891C37AB3200B36D00 /* AppDelegate.m */; };
 		24FC5C8D1C37AB3200B36D00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FC5C8C1C37AB3200B36D00 /* ViewController.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24485D161C37AF7D0058C820 /* JQWarterFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQWarterFlowView.h; sourceTree = "<group>"; };
+		24485D171C37AF7D0058C820 /* JQWarterFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQWarterFlowView.m; sourceTree = "<group>"; };
+		24485D191C37B43E0058C820 /* JQWarterFlowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQWarterFlowCell.h; sourceTree = "<group>"; };
+		24485D1A1C37B43E0058C820 /* JQWarterFlowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQWarterFlowCell.m; sourceTree = "<group>"; };
 		24FC5C821C37AB3200B36D00 /* qq瀑布流.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "qq瀑布流.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FC5C861C37AB3200B36D00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24FC5C881C37AB3200B36D00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,9 +84,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24485D151C37AF3E0058C820 /* QQWarterFlow */ = {
+			isa = PBXGroup;
+			children = (
+				24485D161C37AF7D0058C820 /* JQWarterFlowView.h */,
+				24485D171C37AF7D0058C820 /* JQWarterFlowView.m */,
+				24485D191C37B43E0058C820 /* JQWarterFlowCell.h */,
+				24485D1A1C37B43E0058C820 /* JQWarterFlowCell.m */,
+			);
+			path = QQWarterFlow;
+			sourceTree = "<group>";
+		};
 		24FC5C791C37AB3200B36D00 = {
 			isa = PBXGroup;
 			children = (
+				24485D151C37AF3E0058C820 /* QQWarterFlow */,
 				24FC5C841C37AB3200B36D00 /* qq瀑布流 */,
 				24FC5C9E1C37AB3200B36D00 /* qq瀑布流Tests */,
 				24FC5CA91C37AB3200B36D00 /* qq瀑布流UITests */,
@@ -270,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24485D181C37AF7D0058C820 /* JQWarterFlowView.m in Sources */,
+				24485D1B1C37B43E0058C820 /* JQWarterFlowCell.m in Sources */,
 				24FC5C8D1C37AB3200B36D00 /* ViewController.m in Sources */,
 				24FC5C8A1C37AB3200B36D00 /* AppDelegate.m in Sources */,
 				24FC5C871C37AB3200B36D00 /* main.m in Sources */,
@@ -498,6 +518,7 @@
 				24FC5CB11C37AB3200B36D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24FC5CB21C37AB3200B36D00 /* Build configuration list for PBXNativeTarget "qq瀑布流Tests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +527,7 @@
 				24FC5CB41C37AB3200B36D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24FC5CB51C37AB3200B36D00 /* Build configuration list for PBXNativeTarget "qq瀑布流UITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +536,7 @@
 				24FC5CB71C37AB3200B36D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
