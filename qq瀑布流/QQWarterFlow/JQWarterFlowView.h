@@ -50,6 +50,7 @@ JQWaterflowViewMarginItemEdagesMake(CGFloat line, CGFloat clome){
 @interface JQWarterFlowView : UIScrollView
 @property(nonatomic, weak)id<JQWarterFlowViewDataSource> dataSource;//数据源
 @property(nonatomic, weak)id<JQWarterFlowViewDelegate> waterDelegate;//代理（？？为何不能重名 ？？）
+@property(nonatomic, assign)NSUInteger numberClomes;
 - (void)setwaterflowViewMarginEdge :(JQWaterflowViewMarginEdgeSets)edgeSet;//设置整体的边距
 - (void)setwaterflowViewMarginItemEdages:(JQWaterflowViewMarginItemEdages)itemEdages;//设置行和列的边距nullable
 - (void)reloadDate;
@@ -86,7 +87,7 @@ JQWaterflowViewMarginItemEdagesMake(CGFloat line, CGFloat clome){
 /**
  *  返回间距
  */
-- (CGFloat)waterflowView:(JQWarterFlowView *)waterflowView marginForType:(JQWaterflowViewMarginType)type;
+//- (CGFloat)waterflowView:(JQWarterFlowView *)waterflowView marginForType:(JQWaterflowViewMarginType)type;
 
 
 

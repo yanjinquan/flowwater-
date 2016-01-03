@@ -27,10 +27,10 @@
     NSInteger _numberItem;
     NSInteger _numberClome;
 }
-@property (nonatomic, copy)NSMutableArray *itemFrameS;
-@property (nonatomic, copy)NSMutableDictionary *clomeHights;
-@property (nonatomic, copy)NSMutableDictionary *showedItemS;
-@property (nonatomic, copy)NSMutableSet *reusablePond;//重用池
+@property (nonatomic, strong)NSMutableArray *itemFrameS;
+@property (nonatomic, strong)NSMutableDictionary *clomeHights;
+@property (nonatomic, strong)NSMutableDictionary *showedItemS;
+@property (nonatomic, strong)NSMutableSet *reusablePond;//重用池
 @end
 @implementation JQWarterFlowView
 CGFloat waterflowViewMarginTop;
@@ -73,7 +73,7 @@ CGFloat waterflowViewMarginClome;
     [self.itemFrameS removeAllObjects];
     [self.reusablePond removeAllObjects];
     _numberItem = [self.dataSource numberItemwarterFlowView:self];
-    _numberClome = [self numberItems];
+    _numberClome = [self numberClomeOfwarterflow];
     
     CGFloat top = waterflowViewMarginTop;
     CGFloat buttom =waterflowViewMarginButtom;
@@ -100,7 +100,8 @@ CGFloat waterflowViewMarginClome;
         }
         CGFloat hightForItem = [self itemHighForIndex:itemIndex];
         CGRect frame = CGRectMake(left + minitag * (itemWith + clome), clomeHights[minitag], itemWith, hightForItem);
-        [self.itemFrameS addObject:[NSValue valueWithCGRect:frame]];
+        NSValue *framevallue = [NSValue valueWithCGRect:frame];
+        [self.itemFrameS addObject:framevallue];
         clomeHights[minitag] += hightForItem + line;
         itemIndex++;
     }
@@ -182,11 +183,14 @@ CGFloat waterflowViewMarginClome;
     }
 }
 #pragma mark -- integer
-- (NSInteger)numberItems{
+- (NSInteger)numberClomeOfwarterflow{
     if ([self.dataSource respondsToSelector:@selector(numberClomnsForwarterFlowView:)]) {
         return [self.dataSource numberClomnsForwarterFlowView:self];
     }
-    else return clomeDefault;
+    if (self.numberClomes) {
+        return self.numberClomes;
+    }
+    return clomeDefault;
 }
 - (CGFloat)itemHighForIndex :(NSInteger)index{
     if (self.waterDelegate != nil && [self.waterDelegate respondsToSelector:@selector(waterFlowView:heightForItemRowAtIndex:)]) {
