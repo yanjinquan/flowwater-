@@ -84,7 +84,7 @@ CGFloat waterflowViewMarginClome;
     //item的宽度
     CGFloat itemWith = (self.frame.size.width - left - right + line) / _numberClome - line;
     CGFloat clomeHights[_numberClome];
-    for (int i; i < _numberClome; i++) {
+    for (int i = 0; i < _numberClome; i++) {
         clomeHights[i] = top;
     }
 //    CGFloat maxY = top;
